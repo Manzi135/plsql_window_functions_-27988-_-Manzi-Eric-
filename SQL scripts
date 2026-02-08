@@ -1,1 +1,66 @@
+CREATE TABLE Customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    region VARCHAR(50) NOT NULL,
+    signup_date DATE
+);
+INSERT INTO Customers (customer_id, customer_name, email, region, signup_date)
+VALUES
+(1, 'Shema', 'alice.johnson@email.com', 'East', '2025-01-10'),
+(2, 'Manzi', 'bob.smith@email.com', 'Giporoso', '2025-02-15'),
+(3, 'Gisa', 'carol.lee@email.com', 'kanombe', '2025-03-05'),
+(4, 'David', 'david.kim@email.com', 'gisozi', '2025-04-20'),
+(5, 'Eva', 'eva.chen@email.com', 'kacyiru', '2025-05-18');
+
+CREATE TABLE Products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(120) NOT NULL,
+    category VARCHAR(60) NOT NULL,
+    price DECIMAL(10,2) NOT NULL
+);
+INSERT INTO Products (product_id, product_name, category, price)
+VALUES
+(101, 'Red T-Shirt', 'Clothing', 19.99),
+(102, 'Blue Jeans', 'Clothing', 49.99),
+(103, 'Sneakers', 'Footwear', 79.99),
+(104, 'Leather Belt', 'Accessories', 24.99),
+(105, 'Black Hoodie', 'Clothing', 39.99);
+
+CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT NOT NULL,
+    order_date DATE NOT NULL,
+    region VARCHAR(50) NOT NULL,
+    
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+INSERT INTO Orders (order_id, customer_id, order_date, region)
+VALUES
+(1001, 1, '2025-06-01', 'karuruma'),
+(1002, 2, '2025-06-03', 'kimihurura'),
+(1003, 1, '2025-06-15', 'komironko'),
+(1004, 3, '2025-07-01', 'remera'),
+(1005, 4, '2025-07-05', 'kabeza');
+CREATE TABLE Order_Items (
+    item_id INT PRIMARY KEY,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    unit_price DECIMAL(10,2) NOT NULL,
+    
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (product_id) REFERENCES Products(product_id)
+);
+INSERT INTO Order_Items (item_id, order_id, product_id, quantity, unit_price)
+VALUES
+(5001, 1001, 101, 2, 19.99),
+(5002, 1001, 103, 1, 79.99),
+(5003, 1002, 102, 1, 49.99),
+(5004, 1003, 105, 1, 39.99),
+(5005, 1003, 104, 2, 24.99),
+(5006, 1004, 101, 3, 19.99),
+(5007, 1005, 103, 2, 79.99);
+
+
 
