@@ -150,3 +150,16 @@ Monthly sales per region
 Window Function Used:
 AVG() OVER() to calculate the rolling 3-month sales average
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/149d6324-f769-4716-b5da-7cf7382aea1d" />
+# REFERENCES
+PostgreSQL Global Development Group. (2023). PostgreSQL 16 Documentation: Window Functions.
+https://www.postgresql.org/docs/current/functions-window.html
+
+Provides syntax and examples for window functions in SQL.
+
+MySQL. (2023). MySQL 8.0 Reference Manual: Window Functions.
+https://dev.mysql.com/doc/refman/8.0/en/window-functions.html
+
+Practical examples of running totals, moving averages, and ranking.
+
+Oracle. (2023). Oracle Database SQL Language Reference: Analytic Functions.
+https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/analytic-functions.html
