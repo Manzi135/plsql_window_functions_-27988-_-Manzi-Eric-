@@ -163,3 +163,9 @@ Practical examples of running totals, moving averages, and ranking.
 
 Oracle. (2023). Oracle Database SQL Language Reference: Analytic Functions.
 https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/analytic-functions.html
+SCREENSHOT 1
+# Selected screenshots proving personal work
+<img width="761" height="449" alt="PERSONAL WRK1" src="https://github.com/user-attachments/assets/73129beb-17b0-4680-844d-3aaddbaf5b6f" />
+SCREENSHOT 2
+<img width="742" height="478" alt="PERSONAL WRK2" src="https://github.com/user-attachments/assets/67a722e5-3cf3-438f-b4d8-8056cd786299" />
+
